@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Heating System app</string>
+    <string name="defaultTemp">0.0</string>
+    <string name="avaTempLabel">Ava Room Temp:</string>
+    <string name="hallwayTempLabel">Hallway Temp:</string>
+
+
+</resources>

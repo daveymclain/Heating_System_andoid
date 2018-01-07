@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    tools:context="davidgoss.duckdns.org.heatingsystemapp.MainActivity">
+
+    <WebView
+        android:id="@+id/gifWebView"
+        android:layout_width="349dp"
+        android:layout_height="280dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:background="@color/main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </WebView>
+
+    <TextView
+        android:id="@+id/avaTempLabelTextview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/avaTempLabel"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/avaTempOutputTextView"
+        app:layout_constraintHorizontal_bias="0.455"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/avaTempOutputTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/defaultTemp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/halwayTempLabelTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/hallwayTempLabel"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/hallwayTempOutputTextView"
+        app:layout_constraintHorizontal_bias="0.41"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avaTempLabelTextview" />
+
+    <TextView
+        android:id="@+id/hallwayTempOutputTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/defaultTemp"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avaTempOutputTextView" />
+
+    <Button
+        android:id="@+id/desTempSubBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="152dp"
+        android:layout_marginEnd="16dp"
+        android:text="Submit"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/arriwImageView" />
+
+    <EditText
+        android:id="@+id/desTempTextView"
+        android:layout_width="105dp"
+        android:layout_height="59dp"
+        android:layout_marginBottom="148dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="24dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:text="@string/defaultTemp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/desTempSubBtn"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/workingImageView"
+        android:layout_width="57dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/desTempTextView"
+        app:layout_constraintVertical_bias="0.83"
+        app:srcCompat="@mipmap/ic_launcher_round" android:contentDescription="TODO"/>
+
+    <ImageView
+        android:id="@+id/arriwImageView"
+        android:layout_width="29dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="152dp"
+        android:layout_marginEnd="24dp"
+        android:layout_x="285dp"
+        android:layout_y="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/arrow" android:contentDescription="TODO"/>
+
+    <ImageView
+        android:id="@+id/arrowDownImageView"
+        android:layout_width="29dp"
+        android:layout_height="61dp"
+        android:layout_marginBottom="152dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_x="285dp"
+        android:layout_y="80dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/desTempSubBtn"
+        app:srcCompat="@drawable/arrow_red" />
+
+</android.support.constraint.ConstraintLayout>
